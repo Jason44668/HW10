@@ -7,10 +7,10 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
    <script>
        function cal(){
-           a=document.getElementById("a").value;
-           b=document.getElementById("b").value;
-           totals=a/[(b/100)*(b/100)];
-           document.getElementById("total").value=totals;
+           height=document.getElementById("height").value;
+           weight=document.getElementById("weight").value;
+           BMI=weight/[(height/100)*(height/100)];
+           document.getElementById("BMI").value=BMI;
        }
 </script>
 
@@ -33,5 +33,20 @@
                 </p>
             </div>
         </div>        
-    <script async src="https://drv.tw/inc/wd.js"></script></body>
+
+        <div class="col-sm-6">
+
+          <div class="card text-white  bg-primary border-secondary">
+            <div class="card-body">
+            <h5 class="card-title">第二種BMI作法</h5>
+            <p class="card-text">
+               <p>身高 : <input type="number" id="height">cm</p>
+               <p>體重 : <input type="number" id="weight">kg</p>
+               <p><button type="button" class="btn btn-warning" onclick="cal()">計算</button></p>
+               <p>BMI :<input type="text" id="BMI"></p>
+            </p>
+            </div>
+          </div>  
+        </div>
+    
 </html>        
